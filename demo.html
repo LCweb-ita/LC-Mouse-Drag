@@ -53,9 +53,6 @@
         overflow: hidden;
         cursor: grab;
     }
-    body:not(.lc_mousedrag_is_mobile) img {
-        pointer-events: none;
-    }    
     </style>
 </head>
 <body>
@@ -64,14 +61,14 @@
     
     <div id="wrap">
         <div id="inner">
-          <img src="demo_img.webp" draggable="false" />
+          <img src="demo_img.webp" />
         </div>
     </div>
 
     
     
     
-    <script src="lc-mouseDrag.js" type="text/javascript"></script>
+    <script src="lc-mouse-drag.js" type="text/javascript"></script>
     
 	<script type="text/javascript">
     lc_mouseDrag('#inner', 0.3, false, false);

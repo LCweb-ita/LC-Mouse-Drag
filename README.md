@@ -5,7 +5,7 @@ No dependencies **vanilla javascript function** to easily implement a nice drag-
  - optionally set a mobile-device-like smooth drag animation on drag end 
  - optionally control only one scroll axis
  
-Everything in just **1.45KB**.
+Everything in **less than 2KB**.
 
 
 <br/>
@@ -33,7 +33,7 @@ lc_mouseDrag('.target_elements',
 
 
 **NB:** Is essential to have a proper HTML/CSS setup in order to have it working.<br/>
-For example, on desktop, you must use *overflow: hidden;* on the target element and *pointer-events: none;* to elements within.
+For example, on desktop, you must use *overflow: hidden;* on the target element.
 
 Please check the demo.html code to better understand. <br/>
 The function also sets an utility class on the BODY element to know if page is being viewed on a mobile device (not needing this function).
@@ -46,10 +46,7 @@ This is the CSS code used in the demo to apply the proper CSS only on affected d
 body:not(.lc_mousedrag_is_mobile) #inner {
     overflow: hidden;
     cursor: grab;
-}
-body:not(.lc_mousedrag_is_mobile) img {
-    pointer-events: none;
-}    
+} 
 </style>
 ```
 

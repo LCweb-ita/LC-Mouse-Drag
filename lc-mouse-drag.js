@@ -1,6 +1,6 @@
 /**
  * lc-mouseDrag.js - Vanilla javascript (ES6) function enabling drag scrolling on desktop
- * Version: v1.0
+ * Version: v1.0.1
  * Author: Luca Montanari aka LCweb
  * Website: https://lcweb.it
  * Licensed under the MIT license
@@ -52,25 +52,21 @@
                 startScrollY 	= 0,
                 startScrollX 	= 0,
                 scrollDif   	= 0,
-                animation       = null,
-                sms_timeout     = null;    
+                animation       = null;    
 
 
             $elem.addEventListener('mousedown', (e) => {
-                if(sms_timeout) {
-                    clearTimeout(sms_timeout);
-                }
+                e.preventDefault();
                 curDown = true;
 
                 startScrollY = parseInt($elem.scrollTop, 10);
                 startScrollX = parseInt($elem.scrollLeft, 10);
-                curYPos = e.offsetY;
-                curXPos = e.offsetX;
+                curYPos = e.clientY;
+                curXPos = e.clientX;
             }); 
 
 
             $elem.addEventListener('mouseup', (e) => {
-                curDown = false;
                 if(!ratio) {
                     return true;    
                 }
@@ -97,9 +93,16 @@
                 animation = $elem.scroll(scroll_obj);
             });
 
+            
+            
+            document.body.addEventListener('mouseup', (e) => {
+                curDown = false;
+            });
+            
+            
 
             $elem.addEventListener('mousemove', (e) => {
-                if(curDown === true){
+                if(curDown === true) {
                     if(animation) {
                         animation.pause();    
                     }
@@ -108,23 +111,15 @@
                         behavior: 'auto'
                     };
                     if(trackY) {
-                        scroll_obj.top = startScrollY + (curYPos - e.offsetY);
+                        scroll_obj.top = startScrollY + (curYPos - e.clientY);
                     }
                     if(trackX) {
-                        scroll_obj.left = startScrollX + (curXPos - e.offsetX);
+                        scroll_obj.left = startScrollX + (curXPos - e.clientX);
                     }
-
+                    
                     $elem.scroll(scroll_obj);
                 }
-
-                if(sms_timeout) {
-                    clearTimeout(sms_timeout);
-                }
-                sms_timeout = setTimeout(() => {
-                    curDown = false;
-                }, 50);    
             });
-
         };
         
 
