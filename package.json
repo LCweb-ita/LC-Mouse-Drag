@@ -1,0 +1,50 @@
+{
+    "author": "LCweb",
+    "name": "lc-mouse-drag",
+    "version": "1.0.0",
+    "description": "Vanilla javascript (ES6) function enabling drag scrolling on desktop",
+    "keywords": [
+        "javascript",
+        "lightweight",
+        "drag",
+        "scroll",
+        "vanilla-javascript",
+        "pure-javascript",
+        "lc-mouseDrag"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/LCweb-ita/LC-Mouse-Drag.git"
+    },
+    "files": [
+        "lc-mouse-drag.min.js"
+    ],
+    "dependencies": {},
+    "devDependencies": {},
+    "contributors": [
+        {
+            "name": "LCweb-ita",
+            "url": "https://github.com/LCweb-ita"
+        }
+    ],
+    "license": "MIT",
+    "homepage": "https://github.com/LCweb-ita/LC-Mouse-Drag",
+    "bugs": "https://github.com/LCweb-ita/LC-Mouse-Drag/issues",
+    "_extra": {
+        "title": "LC Mouse Drag",
+        "license": {
+            "type": "MIT",
+            "url": "https://github.com/LCweb-ita/LC-Mouse-Drag/blob/main/LICENSE"
+        },
+        "links": {
+            "download": "https://github.com/LCweb-ita/LC-Mouse-Drag/releases",
+            "docs": "https://github.com/LCweb-ita/LC-Mouse-Drag"
+        },
+        "main": [
+            "lc-mouse-drag.min.js"
+        ],
+        "files": [
+            "lc-mouse-drag.min.js"
+        ]
+    }
+}
