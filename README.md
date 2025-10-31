@@ -18,7 +18,7 @@ Everything in **less than 2KB**.
 2. call the function targeting one/multiple page elements and eventually fill optional parameters.<br/><br/>NB: first parameter may be a textual selector or a DOM object (yes, also jQuery objects)
 
 
-```
+```html
 <script type="text/javascript">
 lc_mouseDrag('.target_elements', 
     0.3,    // (float) ending dragging animation delta. 0.3 by default, 0 to disable. 
@@ -41,7 +41,7 @@ The function also sets an utility class on the BODY element to know if page is b
 This is the CSS code used in the demo to apply the proper CSS only on affected devices
 
 
-```
+```html
 <style>
 body:not(.lc_mousedrag_is_mobile) #inner {
     overflow: hidden;
