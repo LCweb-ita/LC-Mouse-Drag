@@ -1,7 +1,7 @@
 {
     "author": "LCweb",
     "name": "lc-mouse-drag",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "Vanilla javascript (ES6) function enabling drag scrolling on desktop",
     "keywords": [
         "javascript",

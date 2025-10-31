@@ -1,7 +1,7 @@
 /**
  * lc-mouseDrag.js - Vanilla javascript (ES6) function enabling drag scrolling on desktop
- * Version: v1.0.1
- * Author: Luca Montanari aka LCweb
+ * Version: v1.0.2
+ * Author: Luca Montanari (LCweb)
  * Website: https://lcweb.it
  * Licensed under the MIT license
  */
@@ -126,9 +126,9 @@
         // init
         get_elems(attachTo).forEach(($el) => {
 
-            // not for touch mobile devices
-            if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                document.body.classList.add('lc_mousedrag_is_mobile');  
+            // only for devices not having a mouse
+            if(window.matchMedia('(pointer: fine)').matches == false) {
+                document.body.classList.add('lc_mousedrag_is_touch');
                 return true;
             }
 
